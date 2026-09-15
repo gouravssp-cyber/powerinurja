@@ -64,7 +64,9 @@ function Index() {
           <Reveal className="lg:col-span-7">
             <Eyebrow>Energy • Materials • Semiconductors</Eyebrow>
             <h1 className="mt-6 text-[clamp(2.8rem,7.5vw,6rem)] leading-[0.92]">
-              India. Energy Security.
+              India.
+              <br />
+              Energy Security.
               <br />
               <span className="text-accent">National Security.</span>
             </h1>
