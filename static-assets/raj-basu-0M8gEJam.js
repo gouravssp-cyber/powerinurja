@@ -1,0 +1,1 @@
+var e=`/assets/raj-basu-CNkYHG7y.png`;export{e as t};
