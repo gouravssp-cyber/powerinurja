@@ -9,9 +9,7 @@ export function Footer() {
           <p className="mt-1 text-sm text-muted-foreground">New Energy and Semiconductors</p>
         </div>
         <p className="text-sm leading-relaxed text-muted-foreground">
-          Website draft created from the supplied July 2026 Investment Memorandum and corporate
-          presentation. Investor-facing financial information is intentionally contained in Investor
-          Relations.
+        
         </p>
         <p className="text-sm text-muted-foreground md:text-right">
           © 2026 PowerIn Urja India Pvt Ltd. All rights reserved.
