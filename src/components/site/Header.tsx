@@ -9,9 +9,9 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
-      <div className="mx-auto flex w-full  items-center gap-6 px-6 md:px-10">
-        <Link to="/" className="flex my-6 items-center gap-3" onClick={() => setOpen(false)}>
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur">
+      <div className="flex w-full items-center gap-6 px-4 sm:px-6 md:px-10">
+        <Link to="/" className="my-6 flex items-center gap-3" onClick={() => setOpen(false)}>
           <img src={powerinLogo} alt="PowerIn Urja" className="h-24 w-auto dark:hidden" />
           <img src={powerinLogodark} alt="PowerIn Urja" className="hidden h-24 w-auto dark:block" />
         </Link>
@@ -44,7 +44,7 @@ export function Header() {
       </div>
 
       {open ? (
-        <nav className="border-t border-border bg-surface px-6 py-4 lg:hidden">
+        <nav className="w-full border-t border-border bg-surface px-4 py-4 sm:px-6 lg:hidden">
           {NAV.map((item) => (
             <Link
               key={item.to}

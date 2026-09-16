@@ -59,7 +59,7 @@ function Index() {
 
   return (
     <>
-      <Section className="pt-24 md:py-6">
+      <Section className="pt-10 md:py-6">
         <div className="grid gap-14 lg:items-stretch lg:grid-cols-12 mt-2">
           <Reveal className="lg:col-span-6">
             <Eyebrow>Energy • Materials • Semiconductors</Eyebrow>
@@ -93,7 +93,7 @@ function Index() {
           </Reveal>
 
           <Reveal className="lg:relative lg:col-span-6 lg:mt-10 lg:flex lg:flex-col" delay={120}>
-            <div className="relative flex items-start justify-center">
+            <div className="relative flex-col flex items-start justify-center">
               <img
                 src={waferHero}
                 alt="Silicon wafer and wafering visual, PowerIn Integrated Manufacturing Campus"
