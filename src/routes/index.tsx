@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Card, Eyebrow, Reveal, Section, SectionLabel } from "@/components/site/primitives";
 import { CONTACT, KPIS, ROADMAP, TEAM, VALUE_CHAIN, VISION_PILLARS } from "@/lib/site-data";
-import waferHero from "@/assets/img1.jpeg";
+import waferHero from "@/assets/img-new.png";
 import siteContext from "@/assets/site-context.png";
 import rajBasu from "@/assets/raj-basu.png";
 

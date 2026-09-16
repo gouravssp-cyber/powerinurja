@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHead, Reveal, Section, SectionLabel } from "@/components/site/primitives";
 import { ROADMAP } from "@/lib/site-data";
-import solarPanel from "@/assets/solar-panel.png";
+import solarPanel from "@/assets/about.png";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -69,7 +69,7 @@ function About() {
             </div>
           </Reveal>
           <Reveal className="lg:col-span-6" delay={100}>
-            <div className="flex justify-center bg-surface-2 p-10">
+            <div className="flex justify-center p-10">
               <img
                 src={solarPanel}
                 alt="Solar panel from the PowerIn Urja corporate presentation"

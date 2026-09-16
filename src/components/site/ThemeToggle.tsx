@@ -9,8 +9,7 @@ export function ThemeToggle() {
 
   useEffect(() => {
     const stored = window.localStorage.getItem("piu-theme") as "light" | "dark" | null;
-    const initial =
-      stored ?? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    const initial = stored ?? "light";
     setTheme(initial);
     apply(initial);
   }, []);
