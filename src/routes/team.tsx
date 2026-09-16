@@ -12,6 +12,8 @@ import rajivKapahi from "@/assets/rajiv-kapahi.png";
 import rameshNair from "@/assets/ramesh-nair.png";
 import ranjitGhosh from "@/assets/ranjit-ghosh.png";
 import sashiKumar from "@/assets/sashi-kumar.jpeg";
+import counsellingPsychology from "@/assets/Counselling-Psychology.png";
+import udayMahurkar from "@/assets/Uday-Mahurkar.png";
 
 export const Route = createFileRoute("/team")({
   head: () => ({
@@ -39,6 +41,8 @@ const PHOTOS: Record<string, string> = {
   "Graham Fennell": grahamFennell,
   "Jalpesh Mehta": jalpeshMehta,
   "Kevin Stratton": kevinStratton,
+  "Shri Uday Mahurkar": udayMahurkar,
+  "Smt. Nirvana Basu": counsellingPsychology,
 };
 
 function Team() {
@@ -65,6 +69,16 @@ function Team() {
                 <p className="eyebrow mt-6 text-accent">{member.role}</p>
                 <h2 className="mt-3 text-2xl">{member.name}</h2>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{member.bio}</p>
+                {"qualifications" in member ? (
+                  <div className="mt-5 border-t border-border pt-4">
+                    <p className="eyebrow text-foreground">Qualifications</p>
+                    <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
+                      {member.qualifications.map((qualification) => (
+                        <li key={qualification}>{qualification}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : null}
               </Card>
             </Reveal>
           ))}

@@ -45,7 +45,7 @@ export const TEAM = [
   {
     name: "Rajdeep Basu",
     role: "Founder & Executive Chairman",
-    bio: "Negotiated 2 GW solar supply-chain agreements with GE; secured US$50 Mn equity from EFS (GE Capital) and CAD146 Mn from Invest Québec; led OEM negotiations for a 1.5 GW US cell & module facility with US$119 Mn incentives; invested in and managed 700+ rooftop and utility-scale solar projects.",
+    bio: "Investor, Technocrat. Negotiated 2 GW solar supply-chain agreements with GE; secured US$50 Mn equity from EFS (GE Capital) and CAD146 Mn from Invest Québec; led OEM negotiations for a 1.5 GW US cell & module facility with US$119 Mn incentives; invested in and managed 700+ rooftop and utility-scale solar projects.",
     photo: "raj-basu",
   },
   {
@@ -56,7 +56,7 @@ export const TEAM = [
   {
     name: "Dr. Puneet Gupta",
     role: "CEO Designate",
-    bio: "Joint President, Adani Mundra Solar — India's only operational ingot & wafer facility. Directly involved in establishing GCL's FBR polysilicon plant in China and the sale of MEMC assets to Samsung; 20+ years across the solar materials value chain.",
+    bio: "Former Joint President, Adani Mundra Solar — India's only operational ingot & wafer facility. Directly involved in establishing GCL's FBR polysilicon plant in China and the sale of MEMC assets to Samsung; 20+ years across the solar materials value chain.",
   },
   {
     name: "Rajiv Kapahi, FCA",
@@ -100,6 +100,22 @@ export const TEAM = [
     role: "Advisor · Insurance",
     bio: "Insurance advisory role supporting risk architecture for the project.",
   },
+  {
+    name: "Shri Uday Mahurkar",
+    role: "Advisor · Social & National Development",
+    bio: "Former Central Information Commissioner, eminent journalist, historian and biographer. Founder of Save Culture Save Bharat Foundation.",
+  },
+  {
+    name: "Smt. Nirvana Basu",
+    role: "Advisor · Employee Wellbeing",
+    bio: "Nirvana is an Integrative Psychotherapist registered with the UK Council for Psychotherapy (UKCP). She holds a diploma in Ayurvedic Lifestyle and Nutrition from the Ayurveda Institute, UK, and is currently studying Srividya with the Mahavidya Sadhana Centre, Hyderabad. Her holistic approach integrates western psychology with eastern wisdom traditions, particularly ancient Indian yogic wisdom, to support the wellbeing of individuals, families and communities.",
+    qualifications: [
+      "MA Counselling Psychology",
+      "MSc Integrative Psychotherapy (UKCP)",
+      "BA Economics",
+      "BSc Financial Services, ACIB",
+    ],
+  },
 ];
 
 export const TRACK_RECORD = [
@@ -114,11 +130,11 @@ export const TRACK_RECORD = [
 ];
 
 export const KPIS = [
-  { label: "Project IRR", value: 23.91, suffix: "%", note: "With Maharashtra incentives", decimals: 2 },
-  { label: "Equity IRR", value: 41.38, suffix: "%", note: "With incentives · phased drawdown", decimals: 2 },
+  { label: "Project IRR", value: 25.95, suffix: "%", note: "With Maharashtra Govt incentives", decimals: 2 },
+  { label: "Equity IRR", value: 43.07, suffix: "%", note: "With incentives · phased drawdown", decimals: 2 },
   { label: "Min. Gross DSCR", value: 2.29, suffix: "×", note: "FY30 · average 3.89×", decimals: 2 },
   { label: "Total Project Cost", value: 4793, prefix: "₹", suffix: " Cr", note: "US$504.5 Mn", decimals: 0 },
-  { label: "Independent Valuation", value: 699.3, prefix: "US$", suffix: " Mn", note: "Pre-IPO, pre-incentive", decimals: 1 },
+  { label: "Independent Valuation", value: 6643.3, prefix: "₹", suffix: " Cr", note: "US$699.3 Mn , Pre-construction ", decimals: 0 },
   { label: "Phase I Equity Raise", value: 1643, prefix: "₹", suffix: " Cr", note: "US$172.9 Mn", decimals: 0 },
 ];
 
@@ -307,9 +323,9 @@ export const ECONOMICS_KPIS = [
   { label: "Total Project Cost", value: "₹4,793 Cr", note: "US$504.5 Mn" },
   { label: "Phase I Equity", value: "₹1,643 Cr", note: "US$172.9 Mn" },
   { label: "Approx. Domestic Term Loan", value: "₹3,150 Cr", note: "Domestic rupee debt" },
-  { label: "Debt / Equity", value: "1.917:1", note: "Phase I financing structure" },
-  { label: "Referenced Third-Party Valuation", value: "US$699.3 Mn", note: "Pre-IPO, pre-incentive" },
-  { label: "Minimum Gross DSCR", value: "2.29×", note: "FY30; average 3.89×" },
+  { label: "Debt / Equity", value: "1.86:1", note: "Phase I financing structure" },
+  { label: "Static Payback From DCCO", value: "~6 years", note: " ㅤ" },
+  { label: "TNW Growth", value: "~9×", note: "FY32 To FY40" },
 ] as const;
 
 export const FDI_PROCESS = [

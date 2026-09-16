@@ -10,10 +10,10 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
-      <div className="mx-auto flex w-full max-w-7xl items-center gap-6 px-6 md:px-10">
-        <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <img src={powerinLogo} alt="PowerIn Urja" className="h-20 w-auto dark:hidden" />
-          <img src={powerinLogodark} alt="PowerIn Urja" className="hidden h-20 w-auto dark:block" />
+      <div className="mx-auto flex w-full  items-center gap-6 px-6 md:px-10">
+        <Link to="/" className="flex my-6 items-center gap-3" onClick={() => setOpen(false)}>
+          <img src={powerinLogo} alt="PowerIn Urja" className="h-24 w-auto dark:hidden" />
+          <img src={powerinLogodark} alt="PowerIn Urja" className="hidden h-24 w-auto dark:block" />
         </Link>
 
         <nav className="ml-auto hidden items-center gap-6 lg:flex">
@@ -22,7 +22,8 @@ export function Header() {
               key={item.to}
               to={item.to}
               activeOptions={{ exact: item.to === "/" }}
-              className="text-[0.8rem] font-medium text-muted-foreground transition-colors hover:text-foreground data-[status=active]:text-accent"
+              className="font-display text-[15px]
+ font-medium text-muted-foreground transition-colors hover:text-foreground data-[status=active]:text-accent"
             >
               {item.label}
             </Link>
@@ -35,7 +36,7 @@ export function Header() {
             type="button"
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle navigation"
-            className="flex h-9 w-9 items-center justify-center border border-border lg:hidden"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-accent text-accent lg:hidden"
           >
             ☰
           </button>
@@ -49,7 +50,7 @@ export function Header() {
               key={item.to}
               to={item.to}
               onClick={() => setOpen(false)}
-              className="block border-b border-border py-3 text-sm text-foreground last:border-0"
+              className="font-display block border-b border-border py-3 text-sm text-foreground last:border-0"
             >
               {item.label}
             </Link>

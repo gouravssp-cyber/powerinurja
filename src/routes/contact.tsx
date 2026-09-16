@@ -26,10 +26,11 @@ function Contact() {
         lead="Engage with PowerIn Urja on strategic partnerships, technology, manufacturing, investment and the PowerIn Integrated Manufacturing Campus."
       />
 
-      <Section className="pt-4">
+
+      <Section className="pt-0">
         <div className="grid gap-12 lg:grid-cols-2">
           <Reveal>
-            <SectionLabel>Start a conversation</SectionLabel>
+            <p className="eyebrow mb-10">Start a conversation</p>
             <h2 className="text-[clamp(1.9rem,3.6vw,3rem)] leading-[1.02]">
               Access to emerging technologies starts with the right industrial platform.
             </h2>
@@ -37,31 +38,15 @@ function Contact() {
               PowerIn Urja is building partnerships across manufacturing, technology, financing,
               supply and offtake as the campus moves from Phase I into its wider platform roadmap.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href={`mailto:${CONTACT.email}`}
-                className="bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
-              >
-                Email the team
-              </a>
-              <a
-                href={CONTACT.phoneHref}
-                className="border border-border px-6 py-3 text-sm font-semibold transition-colors hover:border-accent hover:text-accent"
-              >
-                Call {CONTACT.phone}
-              </a>
-            </div>
+           
           </Reveal>
 
           <Reveal delay={100}>
             <div className="border border-border bg-surface p-8">
               <p className="eyebrow">PowerIn Urja India Private Limited</p>
-              <h2 className="mt-5 text-2xl">Nagpur, Maharashtra</h2>
-              <p className="mt-3 leading-relaxed text-muted-foreground">
-                MIDC Additional Butibori
-                <br />
-                PowerIn Integrated Manufacturing Campus
-              </p>
+              
+              <br className="rule my-7" />
+              enquiry@powerinurja.com
               <hr className="rule my-7" />
               <a className="block text-sm hover:text-accent" href={`mailto:${CONTACT.email}`}>
                 {CONTACT.email}

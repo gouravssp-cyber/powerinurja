@@ -23,6 +23,7 @@ import {
   RETURN_MATRIX,
   VALUATION,
 } from "@/lib/site-data";
+import { ExitMultipleCard } from "@/components/site/ExitMultipleCard";
 
 export const Route = createFileRoute("/investor-relations")({
   head: () => ({
@@ -141,6 +142,11 @@ function InvestorRelations() {
             </div>
           </div>
         </div>
+      </Section>
+
+      <Section className="bg-surface-2">
+        <SectionLabel>Exit multiple sensitivity</SectionLabel>
+        <ExitMultipleCard />
       </Section>
 
       <Section>

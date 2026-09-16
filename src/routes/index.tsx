@@ -2,20 +2,20 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Card, Eyebrow, Reveal, Section, SectionLabel } from "@/components/site/primitives";
 import { CONTACT, KPIS, ROADMAP, TEAM, VALUE_CHAIN, VISION_PILLARS } from "@/lib/site-data";
-import waferHero from "@/assets/wafer-hero.jpeg";
+import waferHero from "@/assets/img1.jpeg";
 import siteContext from "@/assets/site-context.png";
 import rajBasu from "@/assets/raj-basu.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "PowerIn Urja | India. Energy. National Security." },
+      { title: "PowerIn Urja |India. Energy Security. National Security." },
       {
         name: "description",
         content:
           "PowerIn Urja is developing the PowerIn Integrated Manufacturing Campus at MIDC Butibori, Nagpur — 6 GW N-Type solar ingot and wafer manufacturing and a semiconductor pilot line.",
       },
-      { property: "og:title", content: "PowerIn Urja | India. Energy. National Security." },
+      { property: "og:title", content: "PowerIn Urja | India.  Energy Security. National Security." },
       {
         property: "og:description",
         content:
@@ -59,16 +59,17 @@ function Index() {
 
   return (
     <>
-      <Section className="pt-24 md:pt-32">
-        <div className="grid items-end gap-14 lg:grid-cols-12">
-          <Reveal className="lg:col-span-7">
+      <Section className="pt-24 md:py-6">
+        <div className="grid gap-14 lg:items-stretch lg:grid-cols-12 mt-2">
+          <Reveal className="lg:col-span-6">
             <Eyebrow>Energy • Materials • Semiconductors</Eyebrow>
-            <h1 className="mt-6 text-[clamp(2.8rem,7.5vw,6rem)] leading-[0.92]">
+            <h1 className="mt-6 text-[clamp(2.8rem,5.5vw,5rem)] leading-[1.02]">
               India.
               <br />
               Energy Security.
               <br />
-              <span className="text-accent">National Security.</span>
+              <span className="text-accent text-nowrap 
+">National Security.</span>
             </h1>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground">
               PowerIn Urja is developing an integrated manufacturing campus designed to strengthen
@@ -91,15 +92,17 @@ function Index() {
             </div>
           </Reveal>
 
-          <Reveal className="lg:col-span-5" delay={120}>
-            <img
-              src={waferHero}
-              alt="Silicon wafer and wafering visual, PowerIn Integrated Manufacturing Campus"
-              className="w-full object-cover"
-            />
-            <p className="mt-3 text-xs uppercase tracking-[0.14em] text-muted-foreground">
-              PowerIn Integrated Manufacturing Campus · Nagpur, Maharashtra
-            </p>
+          <Reveal className="lg:relative lg:col-span-6 lg:mt-10 lg:flex lg:flex-col" delay={120}>
+            <div className="relative flex items-start justify-center">
+              <img
+                src={waferHero}
+                alt="Silicon wafer and wafering visual, PowerIn Integrated Manufacturing Campus"
+                className="aspect-[16/10] h-auto w-full object-cover"
+              />
+              <p className=" text-xs uppercase tracking-[0.14em] text-muted-foreground lg:absolute lg:left-0 lg:top-full lg:mt-4">
+                PowerIn Integrated Manufacturing Campus · Nagpur, Maharashtra
+              </p>
+            </div>
           </Reveal>
         </div>
 
@@ -254,13 +257,12 @@ function Index() {
                   type="button"
                   aria-pressed={selectedValueChainStage === stage.name}
                   onClick={() => setSelectedValueChainStage(stage.name)}
-                  className={`border px-4 py-3 text-left text-sm transition-colors ${
-                    selectedValueChainStage === stage.name
-                      ? "border-accent bg-accent text-accent-foreground"
-                      : stage.piu
-                        ? "border-accent text-accent hover:bg-accent-soft"
-                        : "border-border hover:border-accent"
-                  }`}
+                  className={`border px-4 py-3 text-left text-sm transition-colors ${selectedValueChainStage === stage.name
+                    ? "border-accent bg-accent text-accent-foreground"
+                    : stage.piu
+                      ? "border-accent text-accent hover:bg-accent-soft"
+                      : "border-border hover:border-accent"
+                    }`}
                 >
                   <span className="block font-semibold">{stage.name}</span>
                   {stage.piu ? <span className="mt-1 block text-xs opacity-80">— PIU</span> : null}
