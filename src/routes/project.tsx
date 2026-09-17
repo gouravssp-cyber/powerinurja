@@ -251,22 +251,73 @@ function Project() {
         <SectionLabel>Strategic positioning</SectionLabel>
         <Reveal>
           <div className="overflow-x-auto border border-border bg-background p-6">
-            <svg viewBox="0 0 760 430" className="min-w-[680px] w-full" role="img" aria-label="Strategic positioning quadrant showing PowerIn Urja near ingot and wafer manufacturing">
+            <svg
+              viewBox="0 0 760 430"
+              className="min-w-[680px] w-full"
+              role="img"
+              aria-label="Strategic positioning quadrant showing PowerIn Urja near ingot and wafer manufacturing"
+            >
               <line x1="90" y1="350" x2="700" y2="350" stroke="currentColor" strokeWidth="2" />
               <line x1="90" y1="350" x2="90" y2="50" stroke="currentColor" strokeWidth="2" />
-              <text x="385" y="405" textAnchor="middle" className="fill-foreground text-sm">Upstream → Downstream</text>
-              <text x="28" y="205" textAnchor="middle" transform="rotate(-90 28 205)" className="fill-foreground text-sm">Conventional → Advanced</text>
+              <text x="385" y="405" textAnchor="middle" className="fill-foreground text-sm">
+                Upstream → Downstream
+              </text>
+              <text
+                x="28"
+                y="205"
+                textAnchor="middle"
+                transform="rotate(-90 28 205)"
+                className="fill-foreground text-sm"
+              >
+                Conventional → Advanced
+              </text>
+
+              <path
+                d="M 185 90 L 225 120 L 280 150 L 445 225 L 530 260 L 570 300"
+                fill="none"
+                stroke="var(--color-foreground)"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                opacity="0.7"
+              />
+              <path
+                d="M 185 90 L 210 110"
+                fill="none"
+                stroke="var(--color-accent)"
+                strokeWidth="2"
+                strokeDasharray="5 4"
+                strokeLinecap="round"
+              />
+
               {[
-                ["Solar EPC", 570, 300], ["Module Manufacturer", 530, 260], ["Cell Manufacturer", 445, 225],
-                ["Wafer Manufacturer", 280, 130], ["Ingot Manufacturer", 205, 105], ["Advanced Semiconductor / Materials", 470, 85],
-              ].map(([label, x, y]) => (
+                ["Ingot Manufacturer", 205, 105, true],
+                ["Wafer Manufacturer", 280, 130, true],
+                ["Cell Manufacturer", 445, 225, false],
+                ["Module Manufacturer", 530, 260, false],
+                ["Solar EPC", 570, 300, false],
+                ["Advanced Semiconductor / Materials", 470, 85, false],
+              ].map(([label, x, y, isAccent]) => (
                 <g key={label as string}>
-                  <circle cx={x as number} cy={y as number} r="7" fill={label === "Ingot Manufacturer" || label === "Wafer Manufacturer" ? "var(--color-accent)" : "var(--color-foreground)"} />
-                  <text x={(x as number) + 12} y={(y as number) + 5} className="fill-foreground text-xs">{label}</text>
+                  <circle
+                    cx={x as number}
+                    cy={y as number}
+                    r="7"
+                    fill={isAccent ? "var(--color-accent)" : "var(--color-foreground)"}
+                  />
+                  <text
+                    x={(x as number) + 12}
+                    y={(y as number) + 5}
+                    className="fill-foreground text-xs"
+                  >
+                    {label}
+                  </text>
                 </g>
               ))}
-              <text x="120" y="80" className="fill-accent text-sm font-semibold">PowerIn Urja</text>
-              <path d="M185 90 230 125" stroke="var(--color-accent)" strokeWidth="2" strokeDasharray="5 4" />
+
+              <text x="120" y="80" className="fill-accent text-sm font-semibold">
+                PowerIn Urja
+              </text>
             </svg>
           </div>
         </Reveal>
