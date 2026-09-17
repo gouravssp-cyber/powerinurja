@@ -99,7 +99,7 @@ function Index() {
                 alt="Silicon wafer and wafering visual, PowerIn Integrated Manufacturing Campus"
                 className="aspect-[16/10] h-auto w-full object-cover"
               />
-              <p className=" text-xs uppercase tracking-[0.14em] text-muted-foreground lg:absolute lg:left-0 lg:top-full lg:mt-4">
+              <p className=" text-xs uppercase tracking-[0.14em] text-muted-foreground lg:absolute lg:left-0 lg:top-full mt-2 lg:mt-4">
                 PowerIn Integrated Manufacturing Campus · Nagpur, Maharashtra
               </p>
             </div>
