@@ -76,16 +76,16 @@ function Index() {
               India's clean-tech and semiconductor supply chains — beginning with advanced N-Type
               solar ingot and wafer manufacturing.
             </p>
-            <div className="mt-9 flex flex-wrap gap-3">
+            <div className="mt-9 flex flex-row flex-nowrap items-center gap-3">
               <Link
                 to="/project"
-                className="bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
+                className="inline-flex items-center bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90 whitespace-nowrap"
               >
                 Explore the Project →
               </Link>
               <Link
                 to="/vision"
-                className="border border-border px-6 py-3 text-sm font-semibold transition-colors hover:border-accent hover:text-accent"
+                className="inline-flex items-center border border-border px-6 py-3 text-sm font-semibold transition-colors hover:border-accent hover:text-accent whitespace-nowrap"
               >
                 Founder's Vision
               </Link>
