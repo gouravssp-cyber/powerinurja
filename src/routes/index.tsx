@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Card, Eyebrow, Reveal, Section, SectionLabel } from "@/components/site/primitives";
 import { CONTACT, KPIS, ROADMAP, TEAM, VALUE_CHAIN, VISION_PILLARS } from "@/lib/site-data";
-import waferHero from "@/assets/img-new.png";
+import waferHero from "@/assets/img1.jpeg";
 import siteContext from "@/assets/site-context.png";
 import rajBasu from "@/assets/raj-basu.png";
 
@@ -61,45 +61,44 @@ function Index() {
     <>
       <Section className="pt-10 md:py-6">
         <div className="grid gap-14 lg:items-stretch lg:grid-cols-12 mt-2">
-          <Reveal className="lg:col-span-6">
+          <Reveal className="min-w-0 lg:col-span-6">
             <Eyebrow>Energy • Materials • Semiconductors</Eyebrow>
             <h1 className="mt-6 text-[clamp(2.8rem,5.5vw,5rem)] leading-[1.02]">
               India.
               <br />
               Energy Security.
               <br />
-              <span className="text-accent text-nowrap 
-">National Security.</span>
+              <span className="text-accent">National Security.</span>
             </h1>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground">
               PowerIn Urja is developing an integrated manufacturing campus designed to strengthen
               India's clean-tech and semiconductor supply chains — beginning with advanced N-Type
               solar ingot and wafer manufacturing.
             </p>
-            <div className="mt-9 flex flex-row flex-nowrap items-center gap-3">
+            <div className="mt-9 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
               <Link
                 to="/project"
-                className="inline-flex items-center bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90 whitespace-nowrap"
+                className="inline-flex items-center justify-center whitespace-nowrap bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
               >
                 Explore the Project →
               </Link>
               <Link
                 to="/vision"
-                className="inline-flex items-center border border-border px-6 py-3 text-sm font-semibold transition-colors hover:border-accent hover:text-accent whitespace-nowrap"
+                className="inline-flex items-center justify-center whitespace-nowrap border border-border px-6 py-3 text-sm font-semibold transition-colors hover:border-accent hover:text-accent"
               >
                 Founder's Vision
               </Link>
             </div>
           </Reveal>
 
-          <Reveal className="lg:relative lg:col-span-6 lg:mt-10 lg:flex lg:flex-col" delay={120}>
+          <Reveal className="min-w-0 lg:relative lg:col-span-6 lg:mt-10 lg:flex lg:flex-col" delay={120}>
             <div className="relative flex-col flex items-start justify-center">
               <img
                 src={waferHero}
-                alt="Silicon wafer and wafering visual, PowerIn Integrated Manufacturing Campus"
-                className="aspect-[16/10] h-auto w-full object-cover"
+                alt="PowerIn Integrated Manufacturing Campus, Nagpur"
+                className="block h-auto max-w-full w-full object-contain"
               />
-              <p className=" text-xs uppercase tracking-[0.14em] text-muted-foreground lg:absolute lg:left-0 lg:top-full mt-2 lg:mt-4">
+              <p className="mt-2 break-words text-xs uppercase tracking-[0.14em] text-muted-foreground lg:absolute lg:left-0 lg:top-full lg:mt-4">
                 PowerIn Integrated Manufacturing Campus · Nagpur, Maharashtra
               </p>
             </div>
