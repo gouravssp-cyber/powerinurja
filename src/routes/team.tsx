@@ -1,19 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Card, Initials, PageHead, Reveal, Section, SectionLabel } from "@/components/site/primitives";
 import { TEAM, TRACK_RECORD } from "@/lib/site-data";
-import benKrause from "@/assets/ben-krause.png";
-import grahamFennell from "@/assets/graham-fennell.jpeg";
-import jaijitBhattacharya from "@/assets/jaijit-bhattacharya.png";
-import jalpeshMehta from "@/assets/jalpesh-mehta.png";
-import kevinStratton from "@/assets/kevin-stratton.png";
-import puneetGupta from "@/assets/puneet-gupta.png";
-import rajBasu from "@/assets/raj-basu.png";
-import rajivKapahi from "@/assets/rajiv-kapahi.png";
-import rameshNair from "@/assets/ramesh-nair.png";
-import ranjitGhosh from "@/assets/ranjit-ghosh.png";
-import sashiKumar from "@/assets/sashi-kumar.jpeg";
-import counsellingPsychology from "@/assets/Counselling-Psychology.png";
-import udayMahurkar from "@/assets/Uday-Mahurkar.png";
+const benKrause = "/ben-krause.png";
+const grahamFennell = "/graham-fennell.jpeg";
+const jaijitBhattacharya = "/jaijit-bhattacharya.png";
+const jalpeshMehta = "/jalpesh-mehta.png";
+const kevinStratton = "/kevin-stratton.png";
+const puneetGupta = "/puneet-gupta.png";
+const rajBasu = "/raj-basu.png";
+const rajivKapahi = "/rajiv-kapahi.png";
+const rameshNair = "/ramesh-nair.png";
+const ranjitGhosh = "/ranjit-ghosh.png";
+const sashiKumar = "/sashi-kumar.jpeg";
+const counsellingPsychology = "/Counselling-Psychology.png";
+const udayMahurkar = "/Uday-Mahurkar.png";
 
 export const Route = createFileRoute("/team")({
   head: () => ({

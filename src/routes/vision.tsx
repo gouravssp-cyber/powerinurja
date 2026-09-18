@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Card, PageHead, Reveal, Section, SectionLabel } from "@/components/site/primitives";
 import { IMPLEMENTATION, VISION_PILLARS } from "@/lib/site-data";
-import rajBasu from "@/assets/raj-basu.png";
+const rajBasu = "/raj-basu.png";
 
 export const Route = createFileRoute("/vision")({
   head: () => ({

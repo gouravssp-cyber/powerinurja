@@ -1,4 +1,4 @@
-import powerinLogo from "@/assets/powerin-logo.png";
+const powerinLogo = "/powerin-logo.png";
 
 export function Footer() {
   return (

@@ -2,9 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Card, Eyebrow, Reveal, Section, SectionLabel } from "@/components/site/primitives";
 import { CONTACT, KPIS, ROADMAP, TEAM, VALUE_CHAIN, VISION_PILLARS } from "@/lib/site-data";
-import waferHero from "@/assets/img1.jpeg";
-import siteContext from "@/assets/site-context.png";
-import rajBasu from "@/assets/raj-basu.png";
+const waferHero = "/img1.jpeg";
+const siteContext = "/site-context.png";
+const rajBasu = "/raj-basu.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({

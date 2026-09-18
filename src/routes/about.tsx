@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHead, Reveal, Section, SectionLabel } from "@/components/site/primitives";
 import { ROADMAP } from "@/lib/site-data";
-import solarPanel from "@/assets/about.png";
+const solarPanel = "/about.png";
 
 export const Route = createFileRoute("/about")({
   head: () => ({

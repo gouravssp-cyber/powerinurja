@@ -1,8 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { NAV } from "@/lib/site-data";
-import powerinLogo from "@/assets/logo-light.png";
-import powerinLogodark from "@/assets/logo-dark.png";
+const powerinLogo = "/logo-light.png";
+const powerinLogodark = "/logo-dark.png";
 import { ThemeToggle } from "./ThemeToggle";
 
 export function Header() {

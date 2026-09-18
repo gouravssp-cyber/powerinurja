@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Card, CountUp, PageHead, Reveal, Section, SectionLabel } from "@/components/site/primitives";
 import { EXECUTION_DISCIPLINES, PROCESS_FLOW, PROJECT_PHASES } from "@/lib/site-data";
-import siteContext from "@/assets/site-context.png";
-import masterplan from "@/assets/masterplan.png";
-import phase1Layout from "@/assets/phase1-layout.png";
+const siteContext = "/site-context.png";
+const masterplan = "/masterplan.png";
+const phase1Layout = "/phase1-layout.png";
 
 export const Route = createFileRoute("/project")({
   head: () => ({
