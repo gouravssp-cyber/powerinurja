@@ -50,7 +50,7 @@ export function Header() {
               key={item.to}
               to={item.to}
               onClick={() => setOpen(false)}
-              className="font-display block border-b border-border py-3 text-sm text-foreground last:border-0"
+              className="font-display block border-b border-border py-3 text-sm text-accent last:border-0"
             >
               {item.label}
             </Link>

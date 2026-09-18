@@ -27,14 +27,14 @@ export function ThemeToggle() {
       onClick={toggle}
       aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
       aria-pressed={theme === "dark"}
-      className={`relative inline-flex h-8 w-14 items-center rounded-full border transition-colors duration-200 ${
+      className={`relative inline-flex h-8 w-14 items-center justify-center rounded-full border transition-colors duration-200 ${
         theme === "dark" ? "border-accent bg-accent/20" : "border-accent bg-muted"
       }`}
     >
       <span className="sr-only">Toggle color mode</span>
 
       <span
-        className={`absolute left-1 top-1 h-6 w-6 rounded-full border border-accent  shadow-sm transition-transform duration-200 ${
+        className={`absolute left-1 top-1/2 h-6 w-6 -translate-y-1/2 rounded-full border border-accent shadow-sm transition-transform duration-200 ${
           theme === "dark" ? "translate-x-6" : "translate-x-0"
         }`}
       />
