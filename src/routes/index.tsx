@@ -157,19 +157,31 @@ function Index() {
         <div className="mb-8">
           <p className="eyebrow text-current opacity-70">Why it matters</p>
         </div>
-        <div className="grid gap-0 md:grid-cols-3">
+        <div className="grid gap-0 md:grid-cols-3 md:items-stretch">
           {WHY.map((c, i) => (
-            <Reveal key={c.n} delay={i * 90} className="bg-inverse p-8 md:border-r md:border-current/20 last:md:border-r-0">
-              <span className="num text-sm opacity-50">{c.n}</span>
-              <h3 className="mt-6 text-2xl">{c.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed opacity-70">{c.body}</p>
+            <Reveal
+              key={c.n}
+              delay={i * 90}
+              className="flex h-full bg-inverse p-8 md:border-r md:border-current/20 last:md:border-r-0"
+            >
+              <div className="flex w-full flex-col justify-center">
+                <span className="num text-sm opacity-50">{c.n}</span>
+                <h3 className="mt-6 text-2xl">{c.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed opacity-70">{c.body}</p>
+              </div>
             </Reveal>
           ))}
         </div>
       </Section>
 
       <Section>
-        <SectionLabel>About the campus</SectionLabel>
+        
+
+<div className="mb-10">
+      
+      <p className="eyebrow">About the campus</p>
+    </div>
+
         <div className="grid gap-12 lg:grid-cols-12">
           <Reveal className="lg:col-span-5">
             <h2 className="text-[clamp(1.9rem,3.6vw,3rem)] leading-[1.02]">
