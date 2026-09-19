@@ -68,7 +68,7 @@ function Index() {
               <br />
               Energy Security.
               <br />
-              <span className="text-accent">National Security.</span>
+              <span className="inline-block whitespace-nowrap text-accent">National Security.</span>
             </h1>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground">
               PowerIn Urja is developing an integrated manufacturing campus designed to strengthen
@@ -154,13 +154,12 @@ function Index() {
       </Section>
 
       <Section className="bg-inverse text-inverse-foreground">
-        <div className="mb-10">
-          <hr className="mb-4 border-t border-current opacity-40" />
+        <div className="mb-8">
           <p className="eyebrow text-current opacity-70">Why it matters</p>
         </div>
-        <div className="grid gap-px bg-current/20 md:grid-cols-3">
+        <div className="grid gap-0 md:grid-cols-3">
           {WHY.map((c, i) => (
-            <Reveal key={c.n} delay={i * 90} className="bg-inverse p-8">
+            <Reveal key={c.n} delay={i * 90} className="bg-inverse p-8 md:border-r md:border-current/20 last:md:border-r-0">
               <span className="num text-sm opacity-50">{c.n}</span>
               <h3 className="mt-6 text-2xl">{c.title}</h3>
               <p className="mt-3 text-sm leading-relaxed opacity-70">{c.body}</p>
@@ -326,7 +325,7 @@ function Index() {
               <h3 className="mt-3 text-2xl">Operators who have delivered.</h3>
               <div className="mt-3 space-y-1 text-sm leading-relaxed text-muted-foreground">
                 {TEAM.slice(0, 3).map((member) => (
-                  <div key={member.name}>[{member.name} · {member.role}]</div>
+                  <div key={member.name}>{member.name} · {member.role}</div>
                 ))}
               </div>
               <Link to="/team" className="mt-6 text-sm font-semibold text-accent hover:underline">
