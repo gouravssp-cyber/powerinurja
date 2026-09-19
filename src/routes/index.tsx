@@ -9,7 +9,7 @@ const rajBasu = "/raj-basu.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "PowerIn Urja |India. Energy Security. National Security." },
+      { title: "PowerIn Urja | India. Energy Security. National Security." },
       {
         name: "description",
         content:
@@ -324,9 +324,11 @@ function Index() {
               <img src={rajBasu} alt="Rajdeep Basu, Founder and Executive Chairman" className="aspect-[4/5] w-full object-cover" />
               <p className="eyebrow mt-6 text-accent">Team</p>
               <h3 className="mt-3 text-2xl">Operators who have delivered.</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                {TEAM.slice(0, 3).map((member) => `${member.name} · ${member.role}`).join(" | ")}
-              </p>
+              <div className="mt-3 space-y-1 text-sm leading-relaxed text-muted-foreground">
+                {TEAM.slice(0, 3).map((member) => (
+                  <div key={member.name}>[{member.name} · {member.role}]</div>
+                ))}
+              </div>
               <Link to="/team" className="mt-6 text-sm font-semibold text-accent hover:underline">
                 View the team →
               </Link>
