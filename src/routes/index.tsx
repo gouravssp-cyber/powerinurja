@@ -54,7 +54,6 @@ const WHY = [
 ];
 
 const HOME_LINKS = [
-  ["About Us", "The campus, roadmap and manufacturing platform.", "/about"],
   ["Project", "Phase I, masterplan and the three-phase campus.", "/project"],
   ["Team", "Operators, advisors and industrial delivery experience.", "/team"],
   ["Founder's Vision", "The mission behind national capability and technology sovereignty.", "/vision"],
@@ -185,59 +184,37 @@ function Index() {
       </Section>
 
       <Section>
-
-
-        <div className="mb-10">
-
-          <p className="eyebrow">About the campus</p>
-        </div>
-
-        <div className="grid gap-12 lg:grid-cols-12">
+        <SectionLabel>About the campus</SectionLabel>
+        <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
           <Reveal className="lg:col-span-5">
-            <h2 className="text-[clamp(1.9rem,3.6vw,3rem)] leading-[1.02]">
-              A platform, not a single plant.
+            <p className="eyebrow text-accent">A connected manufacturing platform</p>
+            <h2 className="mt-4 text-[clamp(2rem,3.8vw,3.2rem)] leading-[1.02]">
+              Integrated by design.
             </h2>
-            <p className="mt-6 leading-relaxed text-muted-foreground">
-              PowerIn Urja India Private Limited is developing the PowerIn Integrated Manufacturing Campus at MIDC Additional Butibori, Nagpur. The wider campus is planned across 300+ acres, beginning with advanced Solar and Semiconductor Ingot and Wafer manufacturing.
-            </p>
-            <Link
-              to="/about"
-              className="mt-7 inline-flex border border-border px-5 py-3 text-sm font-semibold transition-colors hover:border-accent hover:text-accent"
-            >
-              View About Us →
-            </Link>
-          </Reveal>
-          <Reveal className="lg:col-span-7" delay={80}>
-            <div className="grid gap-px bg-border md:grid-cols-2">
-              {ROADMAP.map((item, i) => (
-                <article key={item.period} className="bg-background p-6">
-                  <span className="num text-sm text-accent">{item.period}</span>
-                  <h3 className="mt-4 text-xl">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
-                </article>
-              ))}
-            </div>
-          </Reveal>
-        </div>
-      </Section>
-
-      <Section className="pt-4">
-        <div className="grid items-center gap-14 lg:grid-cols-12">
-          <Reveal className="lg:col-span-6">
-            <h2 className="text-[clamp(1.8rem,3.4vw,2.8rem)]">Integrated by design.</h2>
-            <p className="mt-6 leading-relaxed text-muted-foreground">
+            <p className="mt-6 text-base leading-relaxed text-muted-foreground">
               PowerIn Urja India Private Limited (PIU) is developing the PowerIn Integrated
               Manufacturing Campus (PIMC) at MIDC Additional Butibori, Nagpur, Maharashtra. The
               wider campus is planned across 300+ acres, with Phase I focused on advanced solar
               ingot and wafer manufacturing.
             </p>
-            <p className="mt-4 leading-relaxed text-muted-foreground">
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
               The platform is conceived to span a value chain from hyper-pure polysilicon, solar and
               semiconductor ingots / wafers through devices and critical consumables, neocloud,
               energy storage, hydrogen-based devices, photonics, mechatronics and selected
               ancillaries and R&D.
             </p>
-            <div className="mt-8 flex flex-wrap gap-2">
+            <div className="mt-8 grid grid-cols-2 gap-4 border-y border-border py-5">
+              {[
+                ["300+ acres", "planned campus"],
+                ["6 GW", "Phase I platform"],
+              ].map(([value, label]) => (
+                <div key={label}>
+                  <p className="num text-2xl text-accent">{value}</p>
+                  <p className="mt-1 text-xs text-muted-foreground">{label}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-6 flex flex-wrap gap-2">
               {[
                 "Solar critical materials",
                 "Semiconductor materials",
@@ -256,17 +233,23 @@ function Index() {
               ))}
             </div>
           </Reveal>
-          <Reveal className="lg:col-span-6" delay={100}>
-            <div className="flex justify-center p-10">
-              <img
-                src={solarPanel}
-                alt="Solar panel from the PowerIn Urja corporate presentation"
-                className="max-h-[420px] w-auto"
-              />
+          <Reveal className="lg:col-span-7" delay={80}>
+            <div className="grid h-full gap-px bg-border sm:grid-cols-2">
+              {ROADMAP.map((item, i) => (
+                <article
+                  key={item.period}
+                  className="bg-surface p-6 md:p-7"
+                >
+                  <span className="num text-sm text-accent">{item.period}</span>
+                  <h3 className="mt-4 text-lg font-medium md:text-xl">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+                </article>
+              ))}
             </div>
           </Reveal>
         </div>
       </Section>
+
 
       <Section className="bg-surface-2">
         <SectionLabel>Project at a glance</SectionLabel>
@@ -274,7 +257,7 @@ function Index() {
           <Reveal className="lg:col-span-6">
             <div className="border border-border bg-background p-3">
               <img
-                src={siteContext}
+                src={solarPanel}
                 alt="Site context map for the PowerIn Integrated Manufacturing Campus at Additional Butibori, Nagpur"
                 className="w-full"
               />
@@ -506,7 +489,7 @@ function Index() {
 
       <Section className="bg-surface-2">
         <SectionLabel>Explore the platform</SectionLabel>
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {HOME_LINKS.map(([title, body, to], i) => (
             <Reveal key={title} delay={i * 60}>
               <Link

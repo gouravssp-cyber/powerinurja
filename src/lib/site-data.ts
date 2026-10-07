@@ -4,7 +4,6 @@
 
 export const NAV = [
   { to: "/", label: "Homepage" },
-  { to: "/about", label: "About Us" },
   { to: "/project", label: "Project" },
   { to: "/team", label: "Team" },
   { to: "/vision", label: "Founder's Vision & Mission" },
