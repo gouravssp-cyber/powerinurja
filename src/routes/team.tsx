@@ -53,6 +53,7 @@ function Team() {
         title="Built by people who have delivered"
         highlight="complex industrial platforms."
         lead="PowerIn Urja brings together operating, technical, financial and public-policy experience across the energy and manufacturing value chain."
+        showDivider={false}
       />
 
       <Section className="pt-4">

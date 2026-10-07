@@ -79,6 +79,10 @@
   --chart-2: oklch(0.58 0.19 264);
   --chart-3: oklch(0.72 0.12 262);
   --chart-4: oklch(0.84 0.06 260);
+  --demand-series-1: #2563eb;
+  --demand-series-2: #0f766e;
+  --demand-series-3: #a16207;
+  --demand-series-4: #be123c;
 }
 
 .dark {
@@ -111,6 +115,10 @@
   --chart-2: oklch(0.7 0.18 264);
   --chart-3: oklch(0.8 0.11 262);
   --chart-4: oklch(0.9 0.05 260);
+  --demand-series-1: #60a5fa;
+  --demand-series-2: #5eead4;
+  --demand-series-3: #fbbf24;
+  --demand-series-4: #fb7185;
 }
 
 @layer base {

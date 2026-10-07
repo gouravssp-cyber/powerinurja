@@ -47,6 +47,7 @@ function InvestorRelations() {
         title="Infrastructure for India's next"
         highlight="upstream manufacturing platforms."
         lead="Phase I is a 6 GW N-Type ingot and wafer manufacturing platform, semiconductor ingot and wafer pilot line and pilot AI Neocloud Center at MIDC Additional Butibori, Nagpur, designed as the first stage of a broader integrated campus."
+        showDivider={false}
       />
 
       <Section className="pt-4">
@@ -212,7 +213,7 @@ function InvestorRelations() {
           {[
             ["Capital structure", "Phase I equity requirement of ₹1,643 Cr / US$172.9 Mn against total project cost of ₹4,793 Cr / US$504.5 Mn."],
             ["Industrial support", "Maharashtra incentives include FCI reimbursement, capital subsidy, SGST support, interest subsidy and power-tariff benefits."],
-            ["Strategic demand", "Domestic ingot and wafer manufacturing addresses a structurally import-dependent upstream solar node."],
+            ["Strategic demand", "Domestic ingot and wafer manufacturing addresses a structurally import-dependent upstream solar and semiconductor ."],
             ["Platform optionality", "The campus roadmap extends into semiconductor MiniFAB, energy storage, hydrogen, photonics and mechatronics."],
           ].map(([title, body], i) => (
             <Reveal key={title} delay={i * 70}>
@@ -228,7 +229,7 @@ function InvestorRelations() {
       <Section>
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
-            <SectionLabel>Incentive framework</SectionLabel>
+            <SectionLabel>Secured Incentive framework</SectionLabel>
             <ul className="space-y-3">
               {INCENTIVES.map((incentive, i) => (
                 <Reveal as="li" key={incentive} delay={i * 35} className="flex gap-3 text-sm text-muted-foreground">

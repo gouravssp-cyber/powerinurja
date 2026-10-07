@@ -65,7 +65,7 @@ const PHASES = [
   {
     n: "02",
     title: "Scale + MiniFAB +  Neocloud",
-    body: "10+ GW solar ingot & wafer platform, semiconductor MiniFAB, expanded ESS and next-generation solar technology.",
+    body: "Commercial scale semiconductor ingot & wafer platform, semiconductor MiniFAB, expanded ESS and next-generation solar technology.",
   },
   {
     n: "03",
@@ -203,7 +203,7 @@ function Project() {
             <Reveal>
               <div className="border border-border bg-background p-7">
                 <p className="eyebrow text-foreground">Annual capacity</p>
-                <p className="num mt-4 text-5xl text-accent"><CountUp value={250000} suffix=" units" /></p>
+                <p className="num mt-4 text-5xl text-accent"><CountUp value={250000} suffix=" wafers" /></p>
               </div>
             </Reveal>
             <Reveal delay={80}>
@@ -268,10 +268,10 @@ function Project() {
 
       <Section>
         <SectionLabel>Strategic roadmap</SectionLabel>
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid auto-rows-fr gap-6 md:grid-cols-3">
           {PROJECT_PHASES.map((phase, i) => (
-            <Reveal key={phase.n} delay={i * 80}>
-              <Card className={phase.active ? "border-accent bg-accent-soft md:-translate-y-3" : undefined}>
+            <Reveal key={phase.n} delay={i * 80} className="h-full">
+              <Card className={phase.active ? "border-accent bg-accent-soft" : undefined}>
                 <span className="num text-sm text-accent">{phase.n}</span>
                 <h3 className="mt-6 text-2xl">{phase.title}</h3>
                 <p className="mt-3 leading-relaxed text-muted-foreground">{phase.body}</p>
@@ -327,7 +327,7 @@ function Project() {
               {[
                 ["Ingot Manufacturer", 205, 105, true],
                 ["Wafer Manufacturer", 280, 130, true],
-                ["Cell Manufacturer", 445, 225, false],
+                ["Cell Manufacturer", 445, 225, true],
                 ["Module Manufacturer", 530, 260, false],
                 ["Solar EPC", 570, 300, false],
                 ["Advanced Semiconductor / Materials", 470, 85, true],

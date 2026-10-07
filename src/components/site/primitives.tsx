@@ -84,11 +84,13 @@ export function PageHead({
   title,
   highlight,
   lead,
+  showDivider = true,
 }: {
   eyebrow: string;
   title: string;
   highlight?: string;
   lead?: string;
+  showDivider?: boolean;
 }) {
   return (
     <Section className="pb-8 pt-28 md:pb-10 md:pt-36">
@@ -100,7 +102,7 @@ export function PageHead({
         {lead ? (
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">{lead}</p>
         ) : null}
-        <hr className="rule mt-12" />
+        {showDivider ? <hr className="rule mt-12" /> : null}
       </Reveal>
     </Section>
   );

@@ -31,7 +31,7 @@ export const ROADMAP = [
   {
     period: "2029–30",
     title: "Scale → Semiconductor",
-    body: "Phase II expands solar ingot & wafer capacity and introduces semiconductor MiniFAB capability, Hyper-pure polysilicon,  expanded energy storage and next-generation solar technology.",
+    body: "Phase II implements semiconductor ingot & wafer capacity and introduces semiconductor MiniFAB capability, Hyper-pure polysilicon, expanded energy storage and next-generation solar technology.",
   },
   {
     period: "2031–33",
@@ -212,15 +212,15 @@ export const RISKS = [
   },
   {
     title: "Equity funding",
-    body: "US$100 Mn of Phase I equity is identified as committed in term sheets, against a total Phase I equity requirement of US$172.9 Mn.",
+    body: "US$110 Mn of Phase I equity is identified as committed in term sheets, against a total Phase I equity requirement of US$172.9 Mn.",
   },
   {
     title: "Raw material",
-    body: "A five-year non-Chinese polysilicon supply agreement is described with United Solar Polysilicon, backed by the Government of Oman / IFC.",
+    body: "A five-year non-Chinese polysilicon supply agreement has been signed with United Solar Polysilicon, backed by the Government of Oman / IFC.",
   },
   {
     title: "Execution",
-    body: "An operational partner is described as the world's second-largest ingot & wafer OEM, with an 8-month CTO-led training programme and knowledge transfer.",
+    body: "Our operational partner is the world's second-largest ingot & wafer OEM, with an 8-month CTO-led training programme and knowledge transfer.",
   },
 ];
 
@@ -233,7 +233,7 @@ export const VISION_PILLARS = [
   {
     n: "02",
     title: "Human Capital: Education & Health",
-    body: "Shift education toward critical thinking, STEM and technical and vocational learning; scale national R&D intensity toward 3–4% of GDP; and emphasize preventive healthcare, sanitation, clean water, primary care and nutritional security.",
+    body: "Shift education toward critical thinking, STEM and technical and vocational learning; scale national R&D intensity toward 3–4% of GDP; and emphasize preventive healthcare, sanitation, clean water and air primary care and nutritional security.",
   },
   {
     n: "03",
@@ -243,7 +243,7 @@ export const VISION_PILLARS = [
   {
     n: "04",
     title: "Social Cohesion, Inclusivity & Discipline",
-    body: "Bridge inequality through progressive taxation, broad access to digital public infrastructure and asset creation for rural and underprivileged populations, while reinforcing rule of law, civic responsibility and community engagement.",
+    body: "Bridge inequality through progressive low taxation, broad access to digital public infrastructure and asset creation for rural and underprivileged populations, while reinforcing rule of law, civic responsibility and community engagement.",
   },
   {
     n: "05",
@@ -297,7 +297,7 @@ export const POLICY_TAILWINDS = [
 
 export const PROJECT_PHASES = [
   { n: "01", title: "Phase I", body: "6 GW, N-Type Ingot + Wafer + Semiconductor pilot line + Neocloud, In execution ", active: true },
-  { n: "02", title: "Phase II", body: "Integrated Solar Manufacturing, Hyper-Pure Polysilicon and miniFAB Strategic direction / subject to execution" },
+  { n: "02", title: "Phase II", body: "Integrated Wafer Manufacturing, Hyper-Pure Polysilicon and miniFAB Strategic direction / subject to execution" },
   { n: "03", title: "Phase III", body: "Advanced Materials / Semiconductor Optionality, Future optionality" },
 ];
 
