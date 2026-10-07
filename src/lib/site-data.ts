@@ -228,22 +228,22 @@ export const VISION_PILLARS = [
   {
     n: "01",
     title: "Economic Strategy & Currency Stability",
-    body: "Promote high-value, high-margin manufacturing in semiconductors, green technology and advanced machinery; deepen domestic capital markets; strengthen the Rupee through local-currency trade and disciplined fiscal policy; and formalize the economy through broader tax participation and access to micro-equity.",
+    body: "Promote high-value, high-margin manufacturing in semiconductors, green technology and advanced machinery; deepen domestic capital markets; strengthen the Rupee through Intellectual Property development, local-currency trade and strong fiscal policy; and formalize the economy through broader tax participation and access to micro-equity.",
   },
   {
     n: "02",
     title: "Human Capital: Education & Health",
-    body: "Shift education toward critical thinking, STEM and technical and vocational learning; scale national R&D intensity toward 3–4% of GDP; and emphasize preventive healthcare, sanitation, clean water and air primary care and nutritional security.",
+    body: "Shift education toward critical thinking, STEM and technical and vocational learning; scale national R&D intensity toward 3–4% of GDP; and emphasize preventive healthcare, sanitation, clean water and air, primary care and nutritional security.",
   },
   {
     n: "03",
     title: "Environmental Quality & Modern Urbanization",
-    body: "Modernize cities through transit-oriented development, green building standards, intelligent waste systems and resilient utilities; accelerate clean transport, wastewater treatment and regenerative agriculture; and strengthen food standards and cold-chain logistics.",
+    body: "Modernize cities through transit-oriented development, green building and high architectural standards, intelligent waste systems and resilient utilities; accelerate clean transport, wastewater treatment and regenerative agriculture; and strengthen food standards and cold-chain logistics.",
   },
   {
     n: "04",
     title: "Social Cohesion, Inclusivity & Discipline",
-    body: "Bridge inequality through progressive low taxation, broad access to digital public infrastructure and asset creation for rural and underprivileged populations, while reinforcing rule of law, civic responsibility and community engagement.",
+    body: "Bridge inequality through innovative taxation policy, broad access to digital public infrastructure and asset creation for rural and underprivileged populations, while reinforcing rule of law, civic responsibility and community engagement.",
   },
   {
     n: "05",
