@@ -297,7 +297,7 @@ export const POLICY_TAILWINDS = [
 
 export const PROJECT_PHASES = [
   { n: "01", title: "Phase I", body: "6 GW, N-Type Ingot + Wafer + Semiconductor pilot line + Neocloud, In execution ", active: true },
-  { n: "02", title: "Phase II", body: "Integrated Wafer Manufacturing, Hyper-Pure Polysilicon and miniFAB Strategic direction / subject to execution" },
+  { n: "02", title: "Phase II", body: "Integrated Wafer Manufacturing, Hyper-Pure Polysilicon and critical consumables , miniFAB Strategic direction / subject to execution" },
   { n: "03", title: "Phase III", body: "Advanced Materials / Semiconductor Optionality, Future optionality" },
 ];
 
