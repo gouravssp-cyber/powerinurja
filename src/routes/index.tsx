@@ -12,6 +12,7 @@ import {
 } from "@/lib/site-data";
 const waferHero = "/img1.jpeg";
 const siteContext = "/site-context.png";
+const solarPanel = "/about.png";
 const rajBasu = "/raj-basu.png";
 
 export const Route = createFileRoute("/")({
@@ -215,6 +216,53 @@ function Index() {
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
                 </article>
               ))}
+            </div>
+          </Reveal>
+        </div>
+      </Section>
+
+      <Section className="pt-4">
+        <div className="grid items-center gap-14 lg:grid-cols-12">
+          <Reveal className="lg:col-span-6">
+            <h2 className="text-[clamp(1.8rem,3.4vw,2.8rem)]">Integrated by design.</h2>
+            <p className="mt-6 leading-relaxed text-muted-foreground">
+              PowerIn Urja India Private Limited (PIU) is developing the PowerIn Integrated
+              Manufacturing Campus (PIMC) at MIDC Additional Butibori, Nagpur, Maharashtra. The
+              wider campus is planned across 300+ acres, with Phase I focused on advanced solar
+              ingot and wafer manufacturing.
+            </p>
+            <p className="mt-4 leading-relaxed text-muted-foreground">
+              The platform is conceived to span a value chain from hyper-pure polysilicon, solar and
+              semiconductor ingots / wafers through devices and critical consumables, neocloud,
+              energy storage, hydrogen-based devices, photonics, mechatronics and selected
+              ancillaries and R&D.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-2">
+              {[
+                "Solar critical materials",
+                "Semiconductor materials",
+                "Energy storage",
+                "Hydrogen devices",
+                "Photonics",
+                "Mechatronics",
+                "AI Neocloud",
+              ].map((pill) => (
+                <span
+                  key={pill}
+                  className="border border-border px-3 py-1.5 text-xs font-medium text-muted-foreground"
+                >
+                  {pill}
+                </span>
+              ))}
+            </div>
+          </Reveal>
+          <Reveal className="lg:col-span-6" delay={100}>
+            <div className="flex justify-center p-10">
+              <img
+                src={solarPanel}
+                alt="Solar panel from the PowerIn Urja corporate presentation"
+                className="max-h-[420px] w-auto"
+              />
             </div>
           </Reveal>
         </div>
