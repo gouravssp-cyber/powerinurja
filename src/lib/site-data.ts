@@ -25,19 +25,19 @@ export const ROADMAP = [
     body: "Company formed; PIMC concept developed; state / location, technology and OEM partners selected; government approvals and incentives pursued.",
   },
   {
-    period: "2025–27",
+    period: "2025–28",
     title: "Approvals → Financial Close",
-    body: "Government approvals and incentive framework progressed; equity commitments and strategic supply / offtake arrangements established; Phase I implementation underway.",
+    body: "Government approvals and incentive framework secured; equity commitments and strategic supply / offtake arrangements established;  Phase-I implementation underway.",
   },
   {
-    period: "2028–30",
+    period: "2029–30",
     title: "Scale → Semiconductor",
-    body: "Phase II expands solar ingot & wafer capacity and introduces semiconductor MiniFAB capability, expanded energy storage and next-generation solar technology.",
+    body: "Phase II expands solar ingot & wafer capacity and introduces semiconductor MiniFAB capability, Hyper-pure polysilicon,  expanded energy storage and next-generation solar technology.",
   },
   {
     period: "2031–33",
     title: "Platform → Ecosystem",
-    body: "Further expansion of ingot / wafering, solar cell capability and additional product lines based on business case and technology readiness.",
+    body: "Further expansion of existing capacities and introduction of additional product lines based on business case and technology readiness.",
   },
 ];
 
@@ -203,7 +203,7 @@ export const INCENTIVES = [
 export const VALUATION = [
   { period: "2026 · Independent assessment", value: "US$699 Mn", weight: 9 },
   { period: "2030 · Conservative Phase I exit / partial exit", value: "US$2.4 Bn", weight: 30 },
-  { period: "2032+ · Projected post-Phase II listing scenario", value: "US$8.0 Bn", weight: 100 },
+  { period: "2032+ · Projected post-Phase II listing scenario", value: "US$6.2 Bn", weight: 100 },
 ];
 
 export const RISKS = [
@@ -274,11 +274,19 @@ export const IR_DISCLAIMER =
 export const VALUE_CHAIN = [
   { name: "Polysilicon", description: "Semiconductor-grade raw material used as the feedstock for crystal growth.", piu: false },
   { name: "Ingot", description: "Monocrystalline silicon crystal produced through Czochralski growth; a PowerIn Urja operating stage.", piu: true },
-  { name: "Wafer", description: "Diamond-wire-sawn silicon substrate supplied onward to solar cell and module manufacturers; a PowerIn Urja operating stage.", piu: true },
+  { name: "Wafer", description: "Tungsten-wire-sawn silicon substrate supplied onward to solar cell and module manufacturers; a PowerIn Urja operating stage.", piu: true },
   { name: "Cell", description: "Downstream conversion of a wafer into a photovoltaic cell.", piu: false },
   { name: "Module", description: "Assembly of cells into a finished solar module.", piu: false },
   { name: "Solar Project", description: "Deployment of modules in utility-scale and distributed solar projects.", piu: false },
   { name: "Electricity", description: "Clean electricity generated from installed solar capacity.", piu: false },
+] as const;
+
+export const SEMICONDUCTOR_VALUE_CHAIN = [
+  { name: "Polysilicon", description: "High-purity silicon feedstock used to produce semiconductor crystals.", piu: false },
+  { name: "Ingot", description: "Semiconductor-grade silicon crystal grown for conversion into wafers.", piu: true },
+  { name: "Wafer", description: "Thin, precisely sliced silicon substrate used to manufacture semiconductor devices.", piu: true },
+  { name: "Devices", description: "Semiconductor components and integrated circuits fabricated from silicon wafers.", piu: true },
+  { name: "AI Neocloud", description: "Cloud infrastructure that provides on-demand computing capacity for AI workloads.", piu: true },
 ] as const;
 
 export const POLICY_TAILWINDS = [
@@ -289,8 +297,8 @@ export const POLICY_TAILWINDS = [
 ];
 
 export const PROJECT_PHASES = [
-  { n: "01", title: "Phase I", body: "6 GW, N-Type Ingot + Wafer, In execution", active: true },
-  { n: "02", title: "Phase II", body: "Integrated Solar Manufacturing, Strategic direction / subject to execution" },
+  { n: "01", title: "Phase I", body: "6 GW, N-Type Ingot + Wafer + Semiconductor pilot line + Neocloud, In execution ", active: true },
+  { n: "02", title: "Phase II", body: "Integrated Solar Manufacturing, Hyper-Pure Polysilicon and miniFAB Strategic direction / subject to execution" },
   { n: "03", title: "Phase III", body: "Advanced Materials / Semiconductor Optionality, Future optionality" },
 ];
 
@@ -306,7 +314,8 @@ export const EXECUTION_DISCIPLINES = [
 export const INVESTOR_ECOSYSTEM = [
   { title: "United Solar Polysilicon", location: "Oman / Government of Oman / IFC-backed", amount: "US$20 Mn", status: "Committed" },
   { title: "Greenback Capital", location: "Dubai / UAE", amount: "US$80 Mn with option to US$100 Mn", status: "Committed" },
-  { title: "Potential New Anchor / Co-investor", location: "To be finalised", amount: "US$30–100 Mn", status: "Contemplated — under discussion, not yet closed", pending: true },
+  { title: "Pinnacle (JBM Group Family Office)", location: "Dubai / UAE", amount: "US$20 Mn with option to US$35 Mn", status: "Committed" },
+  { title: "Potential New Anchor / Co-investor", location: "To be finalised", amount: "US$50–100 Mn", status: "Contemplated — under discussion, not yet closed", pending: true },
 ] as const;
 
 export const PROCESS_FLOW = [
@@ -315,7 +324,7 @@ export const PROCESS_FLOW = [
   "Crystal Growth",
   "Ingot",
   "Squaring",
-  "Diamond-Wire Slicing",
+  "Tungsten-Wire Slicing",
   "Wafer",
 ] as const;
 

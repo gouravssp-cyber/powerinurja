@@ -45,8 +45,8 @@ function InvestorRelations() {
       <PageHead
         eyebrow="05 · Investor Relations"
         title="Infrastructure for India's next"
-        highlight="upstream manufacturing platform."
-        lead="Phase I is a 6 GW N-Type ingot and wafer manufacturing platform at MIDC Additional Butibori, Nagpur, designed as the first stage of a broader integrated campus."
+        highlight="upstream manufacturing platforms."
+        lead="Phase I is a 6 GW N-Type ingot and wafer manufacturing platform, semiconductor ingot and wafer pilot line and pilot AI Neocloud Center at MIDC Additional Butibori, Nagpur, designed as the first stage of a broader integrated campus."
       />
 
       <Section className="pt-4">
@@ -96,7 +96,7 @@ function InvestorRelations() {
 
       <Section className="bg-surface-2">
         <SectionLabel>Capital and investor ecosystem</SectionLabel>
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2">
           {INVESTOR_ECOSYSTEM.map((investor, i) => (
             <Reveal key={investor.title} delay={i * 80}>
               <Card className={investor.pending ? "border-dashed" : undefined}>

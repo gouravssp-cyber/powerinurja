@@ -1,7 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Card, Eyebrow, Reveal, Section, SectionLabel } from "@/components/site/primitives";
-import { CONTACT, KPIS, ROADMAP, TEAM, VALUE_CHAIN, VISION_PILLARS } from "@/lib/site-data";
+import {
+  CONTACT,
+  KPIS,
+  ROADMAP,
+  SEMICONDUCTOR_VALUE_CHAIN,
+  TEAM,
+  VALUE_CHAIN,
+  VISION_PILLARS,
+} from "@/lib/site-data";
 const waferHero = "/img1.jpeg";
 const siteContext = "/site-context.png";
 const rajBasu = "/raj-basu.png";
@@ -35,7 +43,7 @@ const WHY = [
   {
     n: "02",
     title: "Designed for N-Type",
-    body: "Czochralski mono-crystal growth and diamond-wire wafering are aligned to TOPCon, HJT and next-generation tandem-compatible products.",
+    body: "Czochralski mono-crystal growth and Tungsten-wire wafering are aligned to TOPCon, HJT and next-generation tandem-compatible products.",
   },
   {
     n: "03",
@@ -56,6 +64,10 @@ const HOME_LINKS = [
 function Index() {
   const [selectedValueChainStage, setSelectedValueChainStage] = useState("Ingot");
   const selectedStage = VALUE_CHAIN.find((stage) => stage.name === selectedValueChainStage) ?? VALUE_CHAIN[1];
+  const [selectedSemiconductorStage, setSelectedSemiconductorStage] = useState("Ingot Growth");
+  const selectedSemiconductorValueChainStage =
+    SEMICONDUCTOR_VALUE_CHAIN.find((stage) => stage.name === selectedSemiconductorStage) ??
+    SEMICONDUCTOR_VALUE_CHAIN[1];
 
   return (
     <>
@@ -111,7 +123,7 @@ function Index() {
             {[
               ["Green powered", "100% green-energy ambition"],
               ["Upstream", "Critical ingot & wafer node"],
-              ["3-phase campus", "Solar • semiconductor • advanced devices"],
+              ["3-phase campus", "Solar • Semiconductor • Advanced devices"],
             ].map(([k, v]) => (
               <div key={k}>
                 <p className="eyebrow text-foreground">{k}</p>
@@ -132,10 +144,7 @@ function Index() {
           </Reveal>
           <Reveal className="lg:col-span-7" delay={80}>
             <p className="text-lg leading-relaxed text-muted-foreground">
-              PowerIn Urja's strategy is to create domestic manufacturing capability at the most
-              structurally constrained points of the energy-transition and technology value chain.
-              The platform is designed to move from solar critical materials into semiconductor,
-              storage, hydrogen, photonics and mechatronics opportunities over time.
+              PowerIn Urja's strategy is to create domestic manufacturing capability at the most structurally constrained points of the energy-transition and technology value chain. The platform is designed to move from Solar critical materials into Semiconductor, Neocloud, Storage, Hydrogen, Photonics and Mechatronics opportunities over time.
             </p>
             <div className="mt-10 grid gap-8 sm:grid-cols-3">
               {[
@@ -175,12 +184,12 @@ function Index() {
       </Section>
 
       <Section>
-        
 
-<div className="mb-10">
-      
-      <p className="eyebrow">About the campus</p>
-    </div>
+
+        <div className="mb-10">
+
+          <p className="eyebrow">About the campus</p>
+        </div>
 
         <div className="grid gap-12 lg:grid-cols-12">
           <Reveal className="lg:col-span-5">
@@ -188,9 +197,7 @@ function Index() {
               A platform, not a single plant.
             </h2>
             <p className="mt-6 leading-relaxed text-muted-foreground">
-              PowerIn Urja India Private Limited is developing the PowerIn Integrated Manufacturing
-              Campus at MIDC Additional Butibori, Nagpur. The wider campus is planned across 300+
-              acres, beginning with advanced solar ingot and wafer manufacturing.
+              PowerIn Urja India Private Limited is developing the PowerIn Integrated Manufacturing Campus at MIDC Additional Butibori, Nagpur. The wider campus is planned across 300+ acres, beginning with advanced Solar and Semiconductor Ingot and Wafer manufacturing.
             </p>
             <Link
               to="/about"
@@ -231,14 +238,14 @@ function Index() {
               N-Type monocrystalline ingots and wafers.
             </h2>
             <p className="mt-5 leading-relaxed text-muted-foreground">
-              State-of-the-art Czochralski mono-crystal growth combined with diamond-wire wafering,
+              State-of-the-art Czochralski mono-crystal growth combined with Tungsten-wire wafering,
               compatible with PERC, TOPCon, HJT and next-generation tandem applications.
             </p>
             <div className="mt-7 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-border pt-5">
               {[
                 ["Campus", "300+ acres planned"],
                 ["Phase I site", "60 acres"],
-                ["Technology", "Mono-CZ + diamond-wire"],
+                ["Technology", "Mono-CZ + Tungsten-wire"],
                 ["Power ambition", "Green-energy powered"],
               ].map(([label, value]) => (
                 <div key={label}>
@@ -287,6 +294,47 @@ function Index() {
             <p className="eyebrow text-accent">Selected stage</p>
             <h3 className="mt-4 text-2xl">{selectedStage.name}{selectedStage.piu ? " — PIU" : ""}</h3>
             <p className="mt-3 max-w-3xl leading-relaxed text-muted-foreground">{selectedStage.description}</p>
+          </Card>
+        </Reveal>
+      </Section>
+
+      <Section>
+        <SectionLabel>The Semiconductor Value Chain</SectionLabel>
+        <Reveal>
+          <div className="flex gap-2 overflow-x-auto pb-3">
+            {SEMICONDUCTOR_VALUE_CHAIN.map((stage, i) => (
+              <div key={stage.name} className="flex shrink-0 items-center gap-2">
+                <button
+                  type="button"
+                  aria-pressed={selectedSemiconductorStage === stage.name}
+                  onClick={() => setSelectedSemiconductorStage(stage.name)}
+                  className={`border px-4 py-3 text-left text-sm transition-colors ${selectedSemiconductorStage === stage.name
+                    ? "border-accent bg-accent text-accent-foreground"
+                    : stage.piu
+                      ? "border-accent text-accent hover:bg-accent-soft"
+                      : "border-border hover:border-accent"
+                    }`}
+                >
+                  <span className="block font-semibold">{stage.name}</span>
+                  {stage.piu ? <span className="mt-1 block text-xs opacity-80">— PIU</span> : null}
+                </button>
+                {i < SEMICONDUCTOR_VALUE_CHAIN.length - 1 ? (
+                  <span className="text-muted-foreground">→</span>
+                ) : null}
+              </div>
+            ))}
+          </div>
+        </Reveal>
+        <Reveal delay={100}>
+          <Card className="mt-5">
+            <p className="eyebrow text-accent">Selected stage</p>
+            <h3 className="mt-4 text-2xl">
+              {selectedSemiconductorValueChainStage.name}
+              {selectedSemiconductorValueChainStage.piu ? " — PIU" : ""}
+            </h3>
+            <p className="mt-3 max-w-3xl leading-relaxed text-muted-foreground">
+              {selectedSemiconductorValueChainStage.description}
+            </p>
           </Card>
         </Reveal>
       </Section>

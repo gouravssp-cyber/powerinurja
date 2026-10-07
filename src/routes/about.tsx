@@ -30,6 +30,7 @@ const PILLS = [
   "Hydrogen devices",
   "Photonics",
   "Mechatronics",
+  "AI Neocloud",
 ];
 
 function About() {
@@ -39,7 +40,7 @@ function About() {
         eyebrow="01 · About Us"
         title="PowerIn Urja is being built as a"
         highlight="platform, not a single plant."
-        lead="A diversified manufacturing campus focused on energy-transition materials, devices and ecosystem infrastructure."
+        lead="A diversified manufacturing campus focused on energy-transition and semiconductor materials, devices and ecosystem infrastructure."
       />
 
       <Section className="pt-4">
@@ -53,9 +54,7 @@ function About() {
               ingot and wafer manufacturing.
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
-              The platform is conceived to span a value chain from hyper-pure polysilicon and solar
-              ingots / wafers through semiconductor materials and devices, energy storage,
-              hydrogen-based devices, photonics, mechatronics and selected ancillaries.
+              The platform is conceived to span a value chain from hyper-pure polysilicon, solar and semiconductor ingots / wafers through devices and critical consumables, neocloud, energy storage, hydrogen-based devices, photonics, mechatronics and selected ancillaries and R&D.
             </p>
             <div className="mt-8 flex flex-wrap gap-2">
               {PILLS.map((p) => (
