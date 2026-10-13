@@ -7,7 +7,7 @@ export const NAV = [
   { to: "/project", label: "Project" },
   { to: "/team", label: "Team" },
   { to: "/vision", label: "Founder's Vision & Mission" },
-  { to: "/investor-relations", label: "Investor Relations" },  
+  { to: "/investor-relations", label: "Investor Relations" },
   { to: "/contact", label: "Contact Us" },
 ] as const;
 
@@ -44,13 +44,13 @@ export const TEAM = [
   {
     name: "Rajdeep Basu",
     role: "Founder & Executive Chairman",
-    bio: "Investor, Technocrat. Negotiated 2 GW solar supply-chain agreements with GE; secured US$50 Mn equity from EFS (GE Capital) and CAD146 Mn from Invest Québec; led OEM negotiations for a 1.5 GW US cell & module facility with US$119 Mn incentives; invested in and managed 700+ rooftop and utility-scale solar projects.",
+    bio: "Investor, innovator, entrepreneur. Ideated technologies, created and backed teams. Negotiated 2 GW solar supply-chain agreements with GE; US$50 Mn equity from EFS (GE Capital) and CAD146 Mn from Invest Québec; acquired and re-engineered hyper pure polysilicon plant; secured US$119 Mn in incentives and led OEM negotiations for a 1.5 GW US cell & module facility; invested in and managed 700+ rooftop and utility-scale solar projects.",
     photo: "raj-basu",
   },
   {
     name: "Ramesh Nair",
     role: "MD Designate",
-    bio: "Former CEO, Adani Solar; former CEO, Avaada Group, BALCO and Sterlite. Independent Director, LG India. Nominee Director, Norfund and British International Investment.",
+    bio: "Former CEO, Adani Solar;\nformer CEO, Avaada Group, BALCO and Sterlite. Independent Director, LG India. Nominee Director, Norfund and British International Investment.",
   },
   {
     name: "Dr. Puneet Gupta",
@@ -71,7 +71,7 @@ export const TEAM = [
   {
     name: "Ranjit Ghosh",
     role: "Director · Projects & Asset Management",
-    bio: "Industrial plant delivery across Toyota Tsusho India, Honda India, Suzuki & Futuba and AISIN Corporation.",
+    bio: "Led complex industrial plant delivery across Toyota Tsusho India, Honda India, Suzuki & Futuba and AISIN Corporation Advised Toyota on Bengaluru metro project delivery.\n Former AGM of Sumitomo Construction",
   },
   {
     name: "Dr. Jaijit Bhattacharya",
@@ -81,23 +81,22 @@ export const TEAM = [
   {
     name: "Ben Krause",
     role: "Director · Technical Services",
-    bio: "Technology selection, OEM negotiations and plant design for large-scale solar manufacturing, including a 1.5 GW US cell & module facility and a 6,000 TPA hyper-pure polysilicon plant; former US military nuclear-operations / polysilicon professional.",
+    bio: "Technology selection, OEM negotiations and plant design for large-scale solar manufacturing, including a 1.5 GW US cell & module facility and a 6,000 TPA hyper-pure polysilicon plant;\nformer US military nuclear-operations / polysilicon professional.",
   },
   {
     name: "Graham Fennell",
     role: "Financial Controller",
-    bio: "Finance leadership role within the initial PowerIn Urja team.",
-    photo: "graham-fennell",
+    bio: "Graham Fennell, FCA. Finance leadership role within the initial PowerIn Urja team for overseas capital raise and M&A. Fellow of the Institute of Chartered Accountants in England and Wales.",
   },
   {
-    name: "Jalpesh Mehta",
+    name: "Dr. Jalpesh Mehta",
     role: "Advisor · Finance",
-    bio: "Specialist finance advisory role within the initial PowerIn Urja team.",
+    bio: "Specialist finance advisory role within the initial PowerIn Urja team. \n India CEO of Greenback Capital Limited, DIFC.\nFormer Business Head - Corporate Banking Group at ICICI.",
   },
   {
     name: "Kevin Stratton",
     role: "Advisor · Insurance",
-    bio: "Insurance advisory role supporting risk architecture for the project.",
+    bio: "Specialist insurance advisory role supporting risk architecture for PowerIn Urja.\n President & CEO, CBC Underwriters Inc, USA.\nFormer CEO Inver Re, Bermuda (The Ardonagh Group); Managing Director RFIB, Speciality (Tysers); Executive Director, Global Head (Accident, Life & Health), Willis Towers Watson; Executive Director, Head of London (Accident, Life, Health), AON Benfield.",
   },
   {
     name: "Shri Uday Mahurkar",
@@ -107,7 +106,7 @@ export const TEAM = [
   {
     name: "Smt. Nirvana Basu",
     role: "Advisor · Employee Wellbeing",
-    bio: "Nirvana is an Integrative Psychotherapist registered with the UK Council for Psychotherapy (UKCP). She holds a diploma in Ayurvedic Lifestyle and Nutrition from the Ayurveda Institute, UK, and is currently studying Srividya with the Mahavidya Sadhana Centre, Hyderabad. Her holistic approach integrates western psychology with eastern wisdom traditions, particularly ancient Indian yogic wisdom, to support the wellbeing of individuals, families and communities.",
+    bio: "Nirvana is an Integrative Psychotherapist registered with the UK Council for Psychotherapy (UKCP). She has studied Yoga at S-YASA, Bangalore, Ayurveda at the Ayurveda Institute, UK, and is currently studying Srividya with the Mahavidya Sadhana Centre. Her holistic approach integrates western psychology with ancient Indian Yogic wisdom, to support the wellbeing of individuals, families and communities.\nFormer Vice President Credit Management TD Securities, Associate Director, Acquisition Finance HBOS Canada and Lloyds Banking group. Committed to assisting the development of charitable projects in the community, through her work with the Charities Aid Foundation and support for charities in Canada (Portage and the Women's Centre of Montreal) and in India (Banjara Academy and Hamari Muskan).",
     qualifications: [
       "MA Counselling Psychology",
       "MSc Integrative Psychotherapy (UKCP)",
@@ -250,6 +249,11 @@ export const VISION_PILLARS = [
     title: "Technological & Military Sovereignty",
     body: "Build self-reliance in strategic technologies and defence, including autonomous systems, AI-enabled electronic warfare, cyber defence and space capabilities, alongside domestic supply chains for critical minerals, advanced computing, biotech and energy storage.",
   },
+  {
+  n: "06",
+  title: "Risk Capital & Patient Capital",
+  body: "Capital that supports stronger research institutions, re-skilling people, AI driven automated infrastructure and super scaling which allows the next generation of Indian companies to create lightning fast lab-to-market ecosystems.",
+},
 ];
 
 export const IMPLEMENTATION = [

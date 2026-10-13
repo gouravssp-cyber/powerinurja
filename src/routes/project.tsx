@@ -1,9 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Card, CountUp, PageHead, Reveal, Section, SectionLabel } from "@/components/site/primitives";
+import {
+  Card,
+  CountUp,
+  PageHead,
+  Reveal,
+  Section,
+  SectionLabel,
+} from "@/components/site/primitives";
 import { EXECUTION_DISCIPLINES, PROCESS_FLOW, PROJECT_PHASES } from "@/lib/site-data";
 const siteContext = "/site-context.png";
-const masterplan = "/masterplan.png";
-const phase1Layout = "/phase1-layout.png";
+const masterplanVideo = "/video1.mp4";
+const phase1Layout = "/image 26.png";
 
 export const Route = createFileRoute("/project")({
   head: () => ({
@@ -101,7 +108,11 @@ function Project() {
               N-Type monocrystalline ingots & wafers
             </h2>
             <p className="mt-5 leading-relaxed text-muted-foreground">
-              State-of-the-art Czochralski Solar and Semiconductor mono-crystal growth combined with Tungsten-wire wafering. <br /> Solar Product architecture is compatible with PERC / TOPCon / HJT downstream platforms and next-generation tandem applications. <br />  Semiconductor Product architecture is compatible with silicon and silicon carbide wafers.
+              State-of-the-art Czochralski Solar and Semiconductor mono-crystal growth combined with
+              Tungsten-wire wafering. <br /> Solar Product architecture is compatible with PERC /
+              TOPCon / HJT downstream platforms and next-generation tandem applications. <br />{" "}
+              Semiconductor Product architecture is compatible with silicon and silicon carbide
+              wafers.
             </p>
             <dl className="mt-8">
               {SPECS.map(([k, v]) => (
@@ -121,10 +132,14 @@ function Project() {
           <div className="flex gap-3 overflow-x-auto pb-3">
             {PROCESS_FLOW.map((step, i) => (
               <div key={step} className="flex shrink-0 items-center gap-3">
-                <span className={`border px-4 py-3 text-sm ${step === "Wafer" ? "border-accent bg-accent text-accent-foreground" : "border-border"}`}>
+                <span
+                  className={`border px-4 py-3 text-sm ${step === "Wafer" ? "border-accent bg-accent text-accent-foreground" : "border-border"}`}
+                >
                   {step}
                 </span>
-                {i < PROCESS_FLOW.length - 1 ? <span className="text-muted-foreground">→</span> : null}
+                {i < PROCESS_FLOW.length - 1 ? (
+                  <span className="text-muted-foreground">→</span>
+                ) : null}
               </div>
             ))}
           </div>
@@ -134,7 +149,11 @@ function Project() {
             <Reveal key={stat} delay={i * 70} className="bg-background p-6">
               <p className="num text-2xl text-accent">{stat}</p>
               <p className="mt-2 text-sm text-muted-foreground">
-                {i === 0 ? "Designed for advanced solar cell platforms." : i === 1 ? "Mono-crystal growth process for ingot production." : "Wafering process for precision silicon substrates."}
+                {i === 0
+                  ? "Designed for advanced solar cell platforms."
+                  : i === 1
+                    ? "Mono-crystal growth process for ingot production."
+                    : "Wafering process for precision silicon substrates."}
               </p>
             </Reveal>
           ))}
@@ -145,13 +164,29 @@ function Project() {
         <SectionLabel>PIMC masterplan</SectionLabel>
         <div className="grid gap-8 md:grid-cols-2">
           {[
-            { src: masterplan, cap: "Campus masterplan · MIDC Additional Butibori" },
-            { src: phase1Layout, cap: "Phase I layout and building geometry" },
+            {
+              src: masterplanVideo,
+              cap: "300+ acre (MIDC Nagpur) Campus location drone video",
+              video: true,
+            },
+            { src: phase1Layout, cap: "Phase I layout and building geometry", video: false },
           ].map((f, i) => (
             <Reveal key={f.cap} delay={i * 100}>
               <figure>
                 <div className="border border-border bg-surface p-3">
-                  <img src={f.src} alt={f.cap} className="w-full" />
+                  {f.video ? (
+                    <video
+                      src={f.src}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      aria-label={f.cap}
+                      className="w-full"
+                    />
+                  ) : (
+                    <img src={f.src} alt={f.cap} className="w-full" />
+                  )}
                 </div>
                 <figcaption className="mt-3 text-xs uppercase tracking-[0.14em] text-muted-foreground">
                   {f.cap}
@@ -163,33 +198,114 @@ function Project() {
       </Section>
 
       <Section className="bg-surface-2">
-        <SectionLabel>Manufacturing scale- solar  </SectionLabel>
+        <SectionLabel>Manufacturing scale- solar </SectionLabel>
         <div className="grid items-center gap-10 lg:grid-cols-12">
           <div className="grid gap-4 sm:grid-cols-2 lg:col-span-5">
             <Reveal>
               <div className="border border-border bg-background p-7">
                 <p className="eyebrow text-foreground">Annual capacity</p>
-                <p className="num mt-4 text-5xl text-accent"><CountUp value={6} suffix=" GW" /></p>
+                <p className="num mt-4 text-5xl text-accent">
+                  <CountUp value={6} suffix=" GW" />
+                </p>
               </div>
             </Reveal>
             <Reveal delay={80}>
               <div className="border border-border bg-background p-7">
                 <p className="eyebrow text-foreground">Phase I site</p>
-                <p className="num mt-4 text-5xl text-accent"><CountUp value={60} suffix=" acres" /></p>
+                <p className="num mt-4 text-5xl text-accent">
+                  <CountUp value={60} suffix=" acres" />
+                </p>
               </div>
             </Reveal>
           </div>
           <Reveal className="lg:col-span-7" delay={120}>
             <div className="border border-border bg-background p-5">
-              <svg viewBox="0 0 640 260" className="w-full text-accent" role="img" aria-label="Stylized Phase I facility footprint">
-                <rect x="20" y="30" width="180" height="85" fill="currentColor" fillOpacity=".1" stroke="currentColor" strokeWidth="2" />
-                <rect x="220" y="30" width="180" height="85" fill="currentColor" fillOpacity=".16" stroke="currentColor" strokeWidth="2" />
-                <rect x="20" y="145" width="280" height="85" fill="currentColor" fillOpacity=".22" stroke="currentColor" strokeWidth="2" />
-                <rect x="320" y="145" width="280" height="85" fill="currentColor" fillOpacity=".08" stroke="currentColor" strokeWidth="2" />
-                <text x="110" y="78" textAnchor="middle" fill="currentColor" fontSize="16" fontWeight="600">Ingot Growth</text>
-                <text x="310" y="78" textAnchor="middle" fill="currentColor" fontSize="16" fontWeight="600">Crystal / Squaring</text>
-                <text x="160" y="193" textAnchor="middle" fill="currentColor" fontSize="16" fontWeight="600">Wafer Slicing</text>
-                <text x="460" y="193" textAnchor="middle" fill="currentColor" fontSize="16" fontWeight="600">Logistics / QC</text>
+              <svg
+                viewBox="0 0 640 260"
+                className="w-full text-accent"
+                role="img"
+                aria-label="Stylized Phase I facility footprint"
+              >
+                <rect
+                  x="20"
+                  y="30"
+                  width="180"
+                  height="85"
+                  fill="currentColor"
+                  fillOpacity=".1"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                />
+                <rect
+                  x="220"
+                  y="30"
+                  width="180"
+                  height="85"
+                  fill="currentColor"
+                  fillOpacity=".16"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                />
+                <rect
+                  x="20"
+                  y="145"
+                  width="280"
+                  height="85"
+                  fill="currentColor"
+                  fillOpacity=".22"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                />
+                <rect
+                  x="320"
+                  y="145"
+                  width="280"
+                  height="85"
+                  fill="currentColor"
+                  fillOpacity=".08"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                />
+                <text
+                  x="110"
+                  y="78"
+                  textAnchor="middle"
+                  fill="currentColor"
+                  fontSize="16"
+                  fontWeight="600"
+                >
+                  Ingot Growth
+                </text>
+                <text
+                  x="310"
+                  y="78"
+                  textAnchor="middle"
+                  fill="currentColor"
+                  fontSize="16"
+                  fontWeight="600"
+                >
+                  Crystal / Squaring
+                </text>
+                <text
+                  x="160"
+                  y="193"
+                  textAnchor="middle"
+                  fill="currentColor"
+                  fontSize="16"
+                  fontWeight="600"
+                >
+                  Wafer Slicing
+                </text>
+                <text
+                  x="460"
+                  y="193"
+                  textAnchor="middle"
+                  fill="currentColor"
+                  fontSize="16"
+                  fontWeight="600"
+                >
+                  Logistics / QC
+                </text>
               </svg>
             </div>
           </Reveal>
@@ -203,29 +319,128 @@ function Project() {
             <Reveal>
               <div className="border border-border bg-background p-7">
                 <p className="eyebrow text-foreground">Annual capacity</p>
-                <p className="num mt-4 text-5xl text-accent"><CountUp value={250000} suffix=" wafers" /></p>
+                <p className="num mt-4 text-5xl text-accent">
+                  <CountUp value={250000} suffix=" wafers" />
+                </p>
               </div>
             </Reveal>
             <Reveal delay={80}>
               <div className="border border-border bg-background p-7 py-13">
                 <p className="eyebrow text-foreground">Phase I site</p>
-                <p className="num mt-4 text-5xl text-accent"><CountUp value={60} suffix=" acres" /></p>
+                <p className="num mt-4 text-5xl text-accent">
+                  <CountUp value={60} suffix=" acres" />
+                </p>
               </div>
             </Reveal>
           </div>
           <Reveal className="lg:col-span-7" delay={120}>
             <div className="border border-border bg-background p-5">
-              <svg viewBox="0 0 640 260" className="w-full text-accent" role="img" aria-label="Stylized Phase I facility footprint">
-                <rect x="20" y="30" width="190" height="85" fill="currentColor" fillOpacity=".1" stroke="currentColor" strokeWidth="2" />
-                <rect x="225" y="30" width="190" height="85" fill="currentColor" fillOpacity=".16" stroke="currentColor" strokeWidth="2" />
-                <rect x="430" y="30" width="190" height="85" fill="currentColor" fillOpacity=".22" stroke="currentColor" strokeWidth="2" />
-                <rect x="20" y="145" width="290" height="85" fill="currentColor" fillOpacity=".14" stroke="currentColor" strokeWidth="2" />
-                <rect x="330" y="145" width="290" height="85" fill="currentColor" fillOpacity=".08" stroke="currentColor" strokeWidth="2" />
-                <text x="115" y="78" textAnchor="middle" fill="currentColor" fontSize="16" fontWeight="600">Ingot Growth</text>
-                <text x="320" y="78" textAnchor="middle" fill="currentColor" fontSize="16" fontWeight="600">Wafer Slicing</text>
-                <text x="525" y="78" textAnchor="middle" fill="currentColor" fontSize="16" fontWeight="600">Wafer Processing</text>
-                <text x="165" y="193" textAnchor="middle" fill="currentColor" fontSize="16" fontWeight="600">Lab</text>
-                <text x="475" y="193" textAnchor="middle" fill="currentColor" fontSize="16" fontWeight="600">Logistics / QC</text>
+              <svg
+                viewBox="0 0 640 260"
+                className="w-full text-accent"
+                role="img"
+                aria-label="Stylized Phase I facility footprint"
+              >
+                <rect
+                  x="20"
+                  y="30"
+                  width="190"
+                  height="85"
+                  fill="currentColor"
+                  fillOpacity=".1"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                />
+                <rect
+                  x="225"
+                  y="30"
+                  width="190"
+                  height="85"
+                  fill="currentColor"
+                  fillOpacity=".16"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                />
+                <rect
+                  x="430"
+                  y="30"
+                  width="190"
+                  height="85"
+                  fill="currentColor"
+                  fillOpacity=".22"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                />
+                <rect
+                  x="20"
+                  y="145"
+                  width="290"
+                  height="85"
+                  fill="currentColor"
+                  fillOpacity=".14"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                />
+                <rect
+                  x="330"
+                  y="145"
+                  width="290"
+                  height="85"
+                  fill="currentColor"
+                  fillOpacity=".08"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                />
+                <text
+                  x="115"
+                  y="78"
+                  textAnchor="middle"
+                  fill="currentColor"
+                  fontSize="16"
+                  fontWeight="600"
+                >
+                  Ingot Growth
+                </text>
+                <text
+                  x="320"
+                  y="78"
+                  textAnchor="middle"
+                  fill="currentColor"
+                  fontSize="16"
+                  fontWeight="600"
+                >
+                  Wafer Slicing
+                </text>
+                <text
+                  x="525"
+                  y="78"
+                  textAnchor="middle"
+                  fill="currentColor"
+                  fontSize="16"
+                  fontWeight="600"
+                >
+                  Wafer Processing
+                </text>
+                <text
+                  x="165"
+                  y="193"
+                  textAnchor="middle"
+                  fill="currentColor"
+                  fontSize="16"
+                  fontWeight="600"
+                >
+                  Lab
+                </text>
+                <text
+                  x="475"
+                  y="193"
+                  textAnchor="middle"
+                  fill="currentColor"
+                  fontSize="16"
+                  fontWeight="600"
+                >
+                  Logistics / QC
+                </text>
               </svg>
             </div>
           </Reveal>
@@ -252,11 +467,7 @@ function Project() {
         <div className="grid gap-6 md:grid-cols-3">
           {PHASES.map((p, i) => (
             <Reveal key={p.n} delay={i * 80}>
-              <Card
-                className={
-                  p.active ? "border-accent bg-accent-soft" : undefined
-                }
-              >
+              <Card className={p.active ? "border-accent bg-accent-soft" : undefined}>
                 <span className="num text-sm text-accent">{p.n}</span>
                 <h3 className="mt-6 text-xl">{p.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.body}</p>
@@ -365,7 +576,9 @@ function Project() {
               <Card>
                 <span className="num text-sm text-accent">{String(i + 1).padStart(2, "0")}</span>
                 <h3 className="mt-5 text-xl">{discipline.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{discipline.body}</p>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  {discipline.body}
+                </p>
               </Card>
             </Reveal>
           ))}

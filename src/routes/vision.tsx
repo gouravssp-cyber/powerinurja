@@ -44,9 +44,9 @@ function Vision() {
               that shape India's energy transition, digital economy and national security.
             </p>
             <p className="mt-5 leading-relaxed text-muted-foreground">
-              That requires patient capital, excellent execution, stronger research institutions,
-              skilled people and infrastructure that lets the next generation of Indian companies
-              build at scale.
+              And provide solutions for clean air &amp; water, naturally nutritional food,
+              correct education and built environment suitable for 21st century habitation.
+             < br/> Access to these are fundamental rights of all our citizens.
             </p>
           </Reveal>
         </div>
