@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Card, Initials, PageHead, Reveal, Section, SectionLabel } from "@/components/site/primitives";
 import { TEAM, TRACK_RECORD } from "@/lib/site-data";
-import nirvanaBasu from "@/assets/NIRVANA-WEBSITE-PHOTO-copy.png";
+import nirvanaBasu from "/NIRVANA-WEBSITE-PHOTO-copy.png";
 const benKrause = "/ben-krause.png";
 const grahamFennell = "/graham-fennell.jpeg";
 const jaijitBhattacharya = "/jaijit-bhattacharya.png";
