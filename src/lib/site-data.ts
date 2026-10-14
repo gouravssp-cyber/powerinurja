@@ -71,7 +71,7 @@ export const TEAM = [
   {
     name: "Ranjit Ghosh",
     role: "Director · Projects & Asset Management",
-    bio: "Led complex industrial plant delivery across Toyota Tsusho India, Honda India, Suzuki & Futuba and AISIN Corporation Advised Toyota on Bengaluru metro project delivery.\n Former AGM of Sumitomo Construction",
+    bio: "Led complex industrial plant delivery across Toyota Tsusho India, Honda India, Suzuki & Futuba and AISIN Corporation Advised Toyota on Bengaluru metro project delivery.\n Former AGM of Sumitomo Construction.",
   },
   {
     name: "Dr. Jaijit Bhattacharya",
